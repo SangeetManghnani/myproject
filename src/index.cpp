@@ -10,13 +10,16 @@ Index::~Index()
 
 bool Index::AddEntry(string filename, string word)
 {  
-	if(wordFileMap.bool empty()const = true) 
+	if(wordFileMap.find(word) == wordFileMap.end())
           {
-          	//creates a new string vectory
+          	vector<string>*newEntry = new vector<string>(); //creates a new string vectory
+                wordFileMap[word] = newEntry;
+                newEntry->push_back(filename);
           }         
     else
        {
-       	
+       	vector<string>* entry = wordFileMap[word];
+       	entry->push_back(filename);
        }
 
 /* TODO: Check if wordFileMap already contains the word. If it does
