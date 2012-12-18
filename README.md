@@ -1,4 +1,4 @@
-myproject
+File Search Utility
 =========
 
 Build instructions:
