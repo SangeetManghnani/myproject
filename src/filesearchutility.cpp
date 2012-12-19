@@ -1,5 +1,5 @@
 #include "filesearchutility.h"
-
+#include <dirent.h>
 FileSearchUtility::FileSearchUtility()
 {
 }
@@ -15,6 +15,20 @@ void FileSearchUtility::SetDirToIndex(string directoryPath)
 
 bool FileSearchUtility::CreateIndex()
 {
+	string filename;
+	DIR    *d;
+  struct dirent *dir;
+  d = opendir(indexedDir);
+  if (d)
+  {
+    while ((dir = readdir(d)) != NULL)
+    {
+      AddFileToIndex(filename);
+    }
+
+    closedir(d);
+  }
+
 	/* TODO: Go through each file in the directory and add it to index.
 	 * Use the method AddFileToIndex(string filename) to add the  file 
 	 * to index.
