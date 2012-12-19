@@ -45,6 +45,15 @@ vector<string> FileSearchUtility::Search(string word)
 
 bool FileSearchUtility::AddFileToIndex(string filename)
 {
+	ifstream file;
+	file.open(filename);
+	string word;
+	if(!file)
+	return; // empty file
+	
+	 	while(file>>word)
+	 	fileIndex.Addentry(filename,word);
+	 }
 	/* TODO: Read each word form file and add it to index.
 	 * Use  fileIndex.AddEntry(filename, word) to add an
 	 * entry to the index.
