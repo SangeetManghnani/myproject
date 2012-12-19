@@ -16,8 +16,8 @@ void FileSearchUtility::SetDirToIndex(string directoryPath)
 bool FileSearchUtility::CreateIndex()
 {
 	/* TODO: Go through each file in the directory and add it to index.
-	 * Use the method fileIndex.AddFileToIndex(string filename) to add the 
-	 * file to index.
+	 * Use the method AddFileToIndex(string filename) to add the  file 
+	 * to index.
 	 */
 	return false;
 }
