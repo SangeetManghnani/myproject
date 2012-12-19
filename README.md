@@ -3,5 +3,5 @@ File Search Utility
 
 Build instructions:
 
-g++ index.cpp main.cpp
+g++ filesearchutility.cpp index.cpp main.cpp
 
