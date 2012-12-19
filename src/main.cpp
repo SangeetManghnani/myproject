@@ -56,7 +56,7 @@ int main()
 				else
 					cout << "Search Results: " << endl;
 				for(int i=0; i < searchResults.size(); i++)
-					cout << searchResults[i];
+					cout << searchResults[i] << endl;
 				cout << endl << endl;
 				cout << "================================" << endl;
 				cout << "Time taken to search: " << timer.duration() << "ms" << endl;
@@ -76,7 +76,7 @@ int main()
 				else
 					cout << "Search Results: " << endl;
 				for(int i=0; i < searchResults.size(); i++)
-					cout << searchResults[i];
+					cout << searchResults[i] << endl;
 				cout << endl << endl;
 				cout << "================================" << endl;
 				cout << "Time taken to search: " << timer.duration() << "ms" << endl;

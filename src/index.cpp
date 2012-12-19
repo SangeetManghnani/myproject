@@ -1,4 +1,7 @@
 #include "index.h"
+#include <algorithm>
+
+using namespace std;
 
 Index::Index()
 {
@@ -19,7 +22,10 @@ bool Index::AddEntry(string filename, string word)
     else
 	{
 		vector<string>* entry = wordFileMap[word];
-		entry->push_back(filename);
+        if(find(entry->begin(), entry->end(), filename) == entry->end())
+        {
+		    entry->push_back(filename);
+        }
 	} 
 	return true;
 }
