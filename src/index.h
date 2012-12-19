@@ -52,6 +52,8 @@ public:
  	 */
 	bool SearchFiles(string word, vector<string>& files);
 
+	int Size();
+
 protected:
 
 	map<string, vector<string>* > wordFileMap;               // Map to hold the index.

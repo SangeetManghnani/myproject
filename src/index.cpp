@@ -42,3 +42,8 @@ bool Index::SearchFiles(string word, vector<string>& files)
 	}
 	return true;
 }
+
+int Index::Size()
+{
+	return wordFileMap.size();
+}

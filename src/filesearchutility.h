@@ -44,9 +44,24 @@ public:
 	/**
 	 * Searches the files in the index for a word.
 	 */
-	vector<string> Search(string word);
+	vector<string> SearchIndex(string word);
+	
+	/**
+	 * Searches the files on disk for a word.
+	 */ 
+	vector<string> SearchDisk(string word);
+	
+	/**
+	 * Returns the size of the index;
+	 */ 
+	int IndexSize();
 
 private:
+
+	/**
+	 * Checks if a file contains a word or not.
+	 */ 
+	bool FileContainsWord(string filename, string word);
 
 	/**
 	 * Adds the file to index
